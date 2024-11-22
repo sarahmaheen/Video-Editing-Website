@@ -1,0 +1,45 @@
+.rubbers-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between the divs */
+    height: 150vh; /* Ensure enough scrollable area */
+}
+
+.rubber {
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Text color */
+    border-radius: 150px; /* Optional: rounded corners */
+    position: relative;
+    cursor: pointer; /* Make it clickable */
+    padding: 2rem; /* Consider adjusting for desired size */
+    transition: all 1s ease-in-out; /* Smooth transition for transformation */
+    transition: transform 0.6s ease-in-out;
+}
+
+.rubber h4 {
+    font-size: 3rem; /* Adjust font size if necessary */
+    margin: 0;
+}
+
+
+.rubber:hover {
+    animation: rubberBandStretch 9s ease-in-out forwards; /* Animation on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyframes for rubber band effect */
+@keyframes rubberBandStretch {
+    0% {
+        transform: translateY(0); /* Start at the original position */
+    }
+   
+    100% {
+        transform: translateY(10px); /* Move rubber band slightly down */
+    }
+}

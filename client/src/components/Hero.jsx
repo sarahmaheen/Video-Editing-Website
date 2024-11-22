@@ -1,20 +1,21 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
-// import  from "../pages/";LandingPage
-// import About from "../pages/About";
-// import Contact from "../pages/Contact";
-// import Services from "../pages/Services";
 import LandingPage from "./LandingPage";
+import AboutPage from "./AboutPage";
+import Rubbers from "./Rubbers"
+import BreakPage from "./BreakPage";
+import HorizontalScroll from "./HorizontalScroll";
+
+import "./Hero.css"; // Import the CSS file for Hero styles
 
 const Hero = () => {
   return (
     <div className="hero">
-      <Routes>
-        <Route path="/" element={< LandingPage/>} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} /> */}
-      </Routes>
+      <LandingPage />
+    
+      <AboutPage />
+      <Rubbers/>
+      <BreakPage/>
+      <HorizontalScroll/>
     </div>
   );
 };

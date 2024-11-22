@@ -1,0 +1,8 @@
+.hero {
+    position: relative; /* Allow absolute positioning for children */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #000; /* Optional background color */
+  }
+  

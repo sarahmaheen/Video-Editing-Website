@@ -1,0 +1,133 @@
+/* Intro Container */
+.intro-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* YES Animation */
+  .yes {
+    animation: scaleIn 0.8s forwards;
+  }
+  
+  /* Ads Static Styling */
+  .ads {
+    display: inline-block;
+    font-size: 4rem; /* Adjust font size as needed */
+    white-space: nowrap;
+    color: white;
+  }
+  
+
+  .ads-highlight {
+    color: yellow; /* Initial color */
+    font-weight: bold;
+    animation: adsColorTransition 2s infinite;
+  }
+
+
+  @keyframes adsColorTransition {
+    0% {
+      color: yellow;
+    }
+    50% {
+      color: red;
+    }
+    100% {
+      color: cyan;
+    }
+  }
+  /* Everyone Flex Container */
+  .everyone-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 0.8s forwards;
+    gap: 10px; /* Adds spacing between words */
+  }
+  
+  /* Individual Words */
+  .everyone-word {
+    font-size: 5rem;
+    opacity: 0;
+    animation: fadeIn 0.3s forwards, growAndWave 1s infinite alternate, colorTransition 0.5s infinite;
+    margin: 5px; /* Adds margin for spacing */
+    text-align: center;
+  }
+  
+  /* Collapse Effect */
+  .everyone-collapsing {
+    font-size: 10rem;
+    animation: collapse 0.5s forwards;
+  }
+  
+  .talking-about {
+    font-size: 9rem;
+    opacity: 0;
+    transform: scale(1);
+    animation: fadeIn 0.3s forwards;
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
+  
+  @keyframes growAndWave {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1.3);
+    }
+  }
+  
+  @keyframes colorTransition {
+    0% {
+      color: white;
+    }
+    50% {
+      color: yellow;
+    }
+    100% {
+      color: blue;
+    }
+  }
+  
+  @keyframes collapse {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(0.1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

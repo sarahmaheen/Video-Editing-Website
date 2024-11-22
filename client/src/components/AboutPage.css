@@ -1,0 +1,166 @@
+/* Main container */
+.about-page {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #000; /* Background color for the page */
+    height: auto;
+    margin-left: auto;
+  }
+  
+  .about-container {
+    flex: 10;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 92vw; /* Fixed width for responsiveness */
+    background-color: #f2f2f2; /* Background color for the page */
+    border-radius:  1.2rem 0 0 1.2rem ;
+    margin-top: 2rem;
+    height: auto;
+  }
+  
+  .upper-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-bottom: 40px;
+    width: 100%;
+    background-color: #f2f2f2;
+  }
+  
+  /* Similies Section */
+  .similies-section {
+    flex: 2;
+    position: relative;
+    height: auto;
+  }
+  
+  .smiley {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    object-fit: contain;
+    transition: transform 0.5s linear;
+  }
+  
+  /* Content Section */
+  .content-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .above-video-content {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .about-video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .about-video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  /* Bottom Section */
+  .about-bottom-section {
+    
+    text-align: left;
+    background-color: #f2f2f2;
+    width: 100%;
+  }
+  
+  .about-bottom-section p {
+    font-size: 1.2rem;
+   
+    text-align: center;
+  }
+  
+  .about-bottom-section h3 {
+    font-size: 7rem;
+    /* line-height: 6.5rem; */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    position: relative;
+    text-align: left;
+    /* background-color: #fff; */
+  }
+  
+  .inline-video {
+    height: 1em; /* Matches the font size of the h3 */
+    width: 1em; /* Ensures square aspect ratio */
+    object-fit: cover; /* Ensures the video fits within the dimensions */
+    vertical-align: middle; /* Aligns video with text */
+    margin: 0 0.5em; /* Adds spacing around the video */
+  }
+  
+  /* Spacer line */
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 15px; /* Adjust padding for tablets */
+      align-items: flex-start; /* Align items to the start */
+    }
+  
+    .upper-section {
+      /* flex-direction: column; */
+      gap: 20px; /* Add space between stacked items */
+      /* background-color: blue; */
+    }
+  
+   
+  
+    .content-section {
+      align-items: flex-start; /* Align content to the start */
+    }
+  
+    .about-video {
+      max-width: 100%; /* Ensure video fits within the container */
+    }
+  
+    /* .spacer {
+      width: 8vw; 
+    } */
+    .about-bottom-section h3{
+        font-size: 5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-container {
+      padding: 10px; /* Reduce padding for mobiles */
+      align-items: flex-start;
+    }
+    .smiley {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+      }
+    
+  
+    /* .spacer {
+      width: 8vw; 
+    } */
+  
+    .about-video {
+      max-width: 100%; /* Ensure video fits smaller screens */
+    }
+    .about-bottom-section h3{
+        font-size: 3rem;
+    }
+  }
+  

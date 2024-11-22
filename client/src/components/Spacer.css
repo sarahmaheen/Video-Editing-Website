@@ -1,0 +1,24 @@
+.spacer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto; /* Full viewport height */
+    overflow-y: scroll; /* Scrollable vertically */
+    position: relative;
+    z-index: 3; /* Ensure it is below the main content */
+    width: 7vw;
+  }
+  
+  .spacer-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar */
+  }
+  
+  .spacer {
+    width: 5vw; /* Fixed width for spacer */
+    height: 0.3vw; /* Thickness of the line */
+    background-color: #fff; /* Line color */
+    margin: 1rem 0;
+    transition: transform 0.1s ease; /* Optional: smooth transition for movement */
+  }
+  

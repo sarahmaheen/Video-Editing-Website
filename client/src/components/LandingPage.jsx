@@ -1,53 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import IntroAnimation from "./IntroAnimation";
 import "./LandingPage.css";
 
 const LandingPage = () => {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => setLoading(false), 3000); // Adjust duration as needed
-    return () => clearTimeout(timer);
-  }, []);
+  const [showIntro, setShowIntro] = useState(true);
 
   return (
     <div className="landing-page">
-      {loading && (
-        <div className="loading-overlay">
-          <div className="circle-container">
-            <div className="circle circle-left"></div>
-            <div className="circle circle-right"></div>
-          </div>
-        </div>
-      )}
-
-      {!loading && (
+      {showIntro ? (
+        <IntroAnimation onComplete={() => setShowIntro(false)} />
+      ) : (
         <>
-          {/* Video Section */}
           <div className="video-container">
             <video
               className="landing-video"
-              src="video1.mp4"
+              src="https://videos.pexels.com/video-files/8244304/8244304-uhd_2560_1440_25fps.mp4"
               autoPlay
               loop
               muted
             ></video>
           </div>
 
-          {/* Content Section */}
           <div className="content-container">
-            {/* Showcase Section */}
             <div className="showcase">
               <h1 className="showcase-title">Welcome to Our Platform</h1>
-              <h2 className="showcase-subtitle">Your journey starts here</h2>
+              <h2 className="showcase-subtitle">Lorem ipsum dolor sit <br /> amet consectetur adipisicing elit. Odio magnam <br /> aspernatur voluptatum omnis </h2>
             </div>
 
-            {/* Buttons Section */}
             <div className="button-container">
-              <button className="video-button">Video 1</button>
-              <button className="video-button">Video 2</button>
-              <button className="video-button">Video 3</button>
-              <button className="video-button">Video 4</button>
+              <button className="video-button">DELL TECNHO</button>
+              <button className="video-button">FIIRA NOV</button>
+              <button className="video-button">XMAN.OL</button>
+              <button className="video-button">LOREq PARis</button>
             </div>
           </div>
         </>
